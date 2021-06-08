@@ -16,7 +16,7 @@ const getAvailableSlots = async function(req, res){
         //console.log(userTimezone);
         //console.log(userTimezone);
         let defTzone = mt.tz.setDefault(OurTimezone);    //set default tzone as local
-        let ourMoment = defTzone("08:00 AM", "hh:mm A"); //local starting time
+        let ourMoment = defTzone(userDate + "08:00 AM", "hh:mm A"); //local starting time
 
         let userStart = mt(ourMoment).tz(userTimezone);  //slot starting time in usertimezone
         let hrs_min = userStart.format("hh:mm:ss A");   //starting time in hrs in usertimezone
