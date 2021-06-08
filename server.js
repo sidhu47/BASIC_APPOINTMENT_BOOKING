@@ -1,3 +1,4 @@
+let PORT = process.env.PORT || 3000;
 const express = require('express');
 const app = express();
 const slotsRouter = require('./router/slots-router');
@@ -14,4 +15,4 @@ app.use('/', (req, res) => {
     res.render('index');
 })
 
-app.listen(3000, console.log("server running"));
+app.listen(PORT, console.log("server running"));
