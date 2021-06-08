@@ -92,4 +92,18 @@ A basic application that allows you to book events from different timezones
     https://appointment-booker-app.herokuapp.com/
       
      
+# I have used ejs to render html pages in the backend so I couldn't send json Data to frontend.
+
+  These are the results when I don't render in the backend and send json data with res.send(jsonData)
+  
+  This is to get freeSlots
+![0E048844-9545-4B25-8E90-67D019EA600F_1_105_c](https://user-images.githubusercontent.com/13482463/121229043-1b6ca580-c8ab-11eb-8fbb-7f8f52e6dca0.jpeg)
+
+  This is to add event
+![9389EDB6-6CEC-445D-856C-260C0B3FCEE6_1_105_c](https://user-images.githubusercontent.com/13482463/121229082-29bac180-c8ab-11eb-9eb4-637ccb506daf.jpeg)
+
+  This is to get events between startDate and endDate
+![238A4733-450A-4E6F-9528-2CD68FC449E5_1_105_c](https://user-images.githubusercontent.com/13482463/121229117-350ded00-c8ab-11eb-9699-202659edea2d.jpeg)
+
+
   
