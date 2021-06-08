@@ -68,7 +68,9 @@ A basic application that allows you to book events from different timezones
 
         }
       
-      
+     2)Slots (holds the freeslots information)
+     
+     
         Slots{
 
           slotbox: [0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ]
