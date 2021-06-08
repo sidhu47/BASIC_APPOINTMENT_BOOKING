@@ -35,15 +35,15 @@ A basic application that allows you to book events from different timezones
     
 # API's
  
-  1) getAvailableSlots(date, timezone) --> POST localhost:3000/slots/
+  1) getAvailableSlots(date, timezone) --> POST localhost:5000/slots/
       
      This function takes date and timezone and returns all the available free slots to book an appointment.
      
-  2) addEvent(name, date, duration) --> POST localhost:3000/events/
+  2) addEvent(name, date, duration) --> POST localhost:5000/events/
      
      This functions books an appointment with given duration. The 'date' should be in ISOformat string. If the duration clashes with other slots it will return    error status(422)
      
-  3) getEvents(startDate, endDate). --> POST localhost:3000/events/allevents
+  3) getEvents(startDate, endDate). --> POST localhost:5000/events/allevents
   
      This function returns all the events between startDate and endDate. The arguments should be in YYYY-MM-DD format
      
