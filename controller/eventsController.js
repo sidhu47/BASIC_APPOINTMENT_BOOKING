@@ -74,7 +74,7 @@ const addEvent = async function(req, res){
             let flag = 0;
             for(let i = slotStartingIndex; i < slotStartingIndex + noOfSlots; i++){
                 if(slotArr[i] == 1){
-                    return res.send("No space for slots");
+                    return res.status(422).render('noSlots');
                 }
                 else slotIndex.push(i);
             }
@@ -99,11 +99,11 @@ const addEvent = async function(req, res){
             }
             await firestore.collection('events').doc().set(newData);
             //console.log("Done");
-            res.render('appointmentSuccessful', { data: newData});
+            res.status(200).render('appointmentSuccessful', { data: newData});
             //return res.send(newData);  
         }
     } catch (error) {
-        return res.status(400).send(error.message);
+        return res.status(422).send(error.message);
     }
 }
 
@@ -127,7 +127,7 @@ const getAllEvents = async function(req, res){
         res.render('allEvents', {eventArr: eventArr});
         //return res.send(eventArr);
     } catch (error) {
-        return res.status(200).send("Error occured in getAllEvents");
+        return res.status(422).send("Error occured in getAllEvents");
     }
     
 }
