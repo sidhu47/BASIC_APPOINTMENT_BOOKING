@@ -40,6 +40,9 @@ const addEvent = async function(req, res){
             return res.send("too early");
         }
         diff = Math.floor(diff / 60000);
+        if(diff >= 540){
+            return res.send("Too late");
+        }
         //console.log(diff + ' is diff');
         
         
