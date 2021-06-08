@@ -101,6 +101,7 @@ const addEvent = async function(req, res){
             //console.log("Done");
             res.status(200).render('appointmentSuccessful', { data: newData});
             //return res.send(newData);  
+            
         }
     } catch (error) {
         return res.status(422).send(error.message);
