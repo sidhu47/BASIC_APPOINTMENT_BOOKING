@@ -77,7 +77,7 @@ A basic application that allows you to book events from different timezones
 
         }
         
-        slotbox array represents slots information for a day
+        slotbox array represents slots information for a day '0' represents free slot '1' represents booked slot
           
           Ex:   slotbox[0] ==> 08:00 AM
           
