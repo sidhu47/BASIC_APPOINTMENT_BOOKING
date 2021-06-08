@@ -1,0 +1,68 @@
+const m = require('moment');
+const mt = require('moment-timezone');
+
+let date = '2021-06-07T16:00:00+01:00';
+let userTimezone = "Europe/London";
+let ourTimezone = "America/Los_Angeles";
+
+let a = m().tz(userTimezone);
+let b = m().tz(ourTimezone);
+
+console.log(a.utcOffset());
+console.log(b.utcOffset())
+
+
+
+//console.log(dif);
+
+let defTzone = mt.tz.setDefault(ourTimezone); //deftzone is a function
+
+let our1 = defTzone('2021-06-07T16:00:00+01:00');
+console.log("test input");
+
+let our2 = defTzone('2021-06-07T17:00:00+01:00');
+console.log(our1.format());
+console.log(our2.format());
+let diff = our1.diff(our2);
+console.log(Math.floor(diff / 60000));
+
+// console.log(our);
+// console.log(' is current time in US');
+
+
+// let ourMoment = defTzone("08:00 AM", "hh:mm A");
+// console.log(ourMoment);
+// console.log(' is start time in US');
+
+
+// let userMoment = mt(ourMoment).tz(userTimezone);
+// console.log(userMoment);
+// console.log(' is start time in EU');
+
+// let userTime = userMoment.format("hh:mm:ss A");
+// let parsedStamp = date + ' ' + userTime;
+// console.log(parsedStamp);
+
+
+// defTzone = mt.tz.setDefault(userTimezone);
+// let userStart = defTzone(parsedStamp, "DD-MM-YYYY hh:mm:ss A");
+// let dummy = defTzone(parsedStamp, "DD-MM-YYYY hh:mm:ss A");
+// console.log(userStart);
+// console.log(' is userStart in EU opening');
+
+
+// let freeSlots = [];
+// for(let i = 0; i < 18; i++){
+//     freeSlots.push(userStart.format());
+//     userStart.add(30, 'minutes');
+// }
+// console.log(freeSlots);
+
+// console.log(dummy.format());
+// console.log(ourMoment.format());
+// let bookingTime = defTzone("2021-06-07T16:30:00+01:00");
+// let gap = bookingTime.diff(dummy);
+// console.log(gap / 60000);
+
+// console.log(bookingTime);
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>All events</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4"> All events for given dates </h1> 
+        <a href="/" class="btn btn-secondary mb-3">Back to homepage</a>
+        <% eventArr.forEach(item => { %>
+            <div class="card mt-4">
+                <div class="card-body">
+                    <h4 class="card-title"> <%= item.name %> </h4>
+                    <div class="card-subtitle"> <%= item.date %>( YYYY-MM-DD )</div>
+                    <div class="card-subtitle"> <%= item.time %> </div>
+                    <div class="card-subtitle"> <%= item.duration %> min </div>
+                </div>
+            </div>
+        <% }) %>
+        
+    </div>
+</body>
+</html>
